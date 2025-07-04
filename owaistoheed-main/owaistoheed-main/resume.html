@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Owais Toheed - Resume</title>
+    <meta content="Resume of Owais Toheed, a B.Tech CSE student with skills in web development and machine learning." name="description">
+    <meta content="Owais Toheed, Resume, Web Development, Machine Learning, Computer Science, B.Tech, Projects, Skills" name="keywords">
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #333; /* Default dark for general use */
+            --accent-blue: #007bff; /* Bright blue for headings */
+            --resume-bg-dark: #1a1a1a; /* Dark background for resume content */
+            --resume-text-light: #f0f0f0; /* Light text for resume content */
+            --border-color: rgba(255, 255, 255, 0.2); /* Light border on dark bg */
+            --link-color: #87ceeb; /* Lighter blue for links on dark background */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--resume-bg-dark); /* Overall dark background */
+            line-height: 1.6;
+            color: var(--resume-text-light); /* Default text color */
+        }
+
+        /* Resume-specific header (Owais Toheed title) */
+        .resume-header-unique {
+            background-color: #000; /* Can be black or very dark */
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 56px; /* Adjust for fixed-top main header */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .resume-header-unique h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 3.2rem;
+            margin-bottom: 5px;
+            color: var(--accent-blue); /* Blue for the main name heading */
+        }
+
+        .resume-header-unique p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Main resume content container (single column) */
+        .resume-content-single {
+            max-width: 800px; /* Max width for content */
+            margin: 30px auto;
+            padding: 30px;
+            background-color: var(--resume-bg-dark); /* Black background for this section */
+            color: var(--resume-text-light); /* White text for this section */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .resume-content-single h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: var(--accent-blue); /* Blue for all H2 headings */
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color); /* Light border */
+        }
+
+        .resume-content-single h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 8px;
+            color: var(--accent-blue); /* Blue for all H3 headings */
+        }
+
+        .resume-content-single p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .resume-content-single ul {
+            list-style: none; /* Removed disc to simplify on dark bg */
+            padding: 0;
+            margin-left: 0; /* Ensures consistent alignment */
+            margin-bottom: 20px;
+        }
+
+        .resume-content-single li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            /* Using a custom bullet for list items for consistency */
+            position: relative;
+            padding-left: 15px;
+        }
+        .resume-content-single li::before {
+            content: "\2022"; /* Unicode bullet point */
+            color: var(--accent-blue); /* Blue bullet point */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+        .resume-content-single a {
+            color: var(--link-color); /* Lighter blue for links */
+            text-decoration: none;
+            word-wrap: break-word;
+        }
+
+        .resume-content-single a:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills specific styling */
+        .skills-list h3 {
+            color: var(--resume-text-light); /* Keep sub-heading for skill categories white */
+            margin-top: 15px; /* Adjust spacing */
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            border-bottom: none; /* No border for skill sub-headings */
+            padding-bottom: 0;
+        }
+
+        .skills-list ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px; /* Slightly smaller gap */
+            margin-bottom: 15px;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background-color: rgba(0, 123, 255, 0.15); /* Light blue background for skill tags */
+            border: 1px solid var(--accent-blue);
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 0.85rem;
+            color: var(--resume-text-light); /* White text for skill tags */
+            white-space: nowrap;
+            display: inline-block; /* Ensure it respects padding/margins */
+            position: unset; /* Remove custom bullet positioning */
+            padding-left: 10px; /* Reset padding for tags */
+        }
+        .skills-list li::before {
+            content: none; /* Remove bullet from skill tags */
+        }
+
+
+        /* Project and Certification items */
+        .project-item, .certification-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid var(--accent-blue); /* Blue accent border */
+        }
+        .project-item p, .certification-item p {
+            margin-bottom: 5px;
+        }
+
+        /* Table styling (Education) */
+        .table-responsive {
+            margin-top: 20px;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: var(--resume-text-light); /* White text for table */
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid var(--border-color); /* Light border */
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid var(--border-color);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: var(--accent-blue); /* Blue heading in table */
+        }
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(255, 255, 255, 0.05); /* Very subtle striping on dark bg */
+        }
+        .table-hover tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Subtle hover on dark bg */
+        }
+
+        /* Styles for the "About" section */
+        #about.about-mf {
+            background-color: black; /* Specific background for the about section */
+        }
+
+        #about .box-shadow-full {
+            background-color: black; /* Ensure the inner box is also black */
+            box-shadow: none; /* Remove box shadow if not desired on dark */
+        }
+
+        #about .title-box-2 h5.title-left,
+        #about .skill-mf p.title-s {
+            color: var(--accent-blue); /* Blue for headings like "About me" and "Skill" */
+        }
+
+        #about .about-info p span.title-s {
+            color: var(--accent-blue); /* Blue for titles like "Name:", "Profile:", etc. */
+        }
+
+        #about .about-info p,
+        #about .skill-mf span,
+        #about .lead {
+            color: white; /* White text for all paragraphs and spans in this section */
+        }
+        #about .progress-bar {
+            background-color: var(--accent-blue); /* Ensure progress bars are blue */
+        }
+
+        /* Styles for the download button */
+        .download-resume-section {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .download-resume-section .btn-download {
+            background-color: var(--accent-blue);
+            color: white;
+            border: 2px solid var(--accent-blue);
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            text-decoration: none; /* Ensure no underline */
+            display: inline-flex; /* Align icon and text */
+            align-items: center;
+            gap: 8px; /* Space between text and icon */
+        }
+
+        .download-resume-section .btn-download:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3;
+            color: white;
+        }
+
+
+        /* --- RESPONSIVENESS (Media Queries) --- */
+        @media (max-width: 767.98px) {
+            .resume-header-unique {
+                padding: 25px 10px;
+            }
+            .resume-header-unique h1 {
+                font-size: 2rem;
+            }
+            .resume-header-unique p {
+                font-size: 0.95rem;
+            }
+
+            .resume-content-single {
+                margin: 20px 10px; /* Smaller margins on mobile */
+                padding: 15px; /* Reduced padding */
+                border-radius: 5px;
+            }
+
+            .resume-content-single h2 {
+                font-size: 1.5rem; /* Smaller H2 */
+                margin-bottom: 15px;
+                padding-bottom: 8px;
+            }
+
+            .resume-content-single h3 {
+                font-size: 1.1rem; /* Smaller H3 */
+                margin-top: 20px;
+            }
+
+            .resume-content-single p,
+            .resume-content-single li {
+                font-size: 0.9rem; /* Slightly smaller body text */
+            }
+
+            .skills-list li {
+                font-size: 0.8rem; /* Even smaller skill tags */
+                padding: 3px 8px;
+            }
+
+            .table th, .table td {
+                padding: 0.6rem; /* Smaller padding in table */
+            }
+
+            /* About section mobile adjustments */
+            #about .about-img {
+                margin-bottom: 20px; /* Add space below image */
+            }
+            #about .col-md-6 {
+                padding-bottom: 20px; /* Add padding between stacked columns */
+            }
+
+            .download-resume-section .btn-download {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .resume-content-single {
+                max-width: 700px; /* Adjust for tablet sizes */
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1 class="logo"><a href="index.html">Owaisjourney</a></h1>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+                    <li><a class="nav-link scrollto active" href="blog-single.html">Resume</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header><div class="hero hero-single route bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="hero-content display-table">
+            <div class="table-cell">
+                <div class="container">
+                    <h2 class="hero-title mb-4">Resume</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <div class="resume-content-single">
+
+        <h2>Contact Information</h2>
+        <ul>
+            <li><strong>Phone:</strong> +91-6006393403</li>
+            <li><strong>Email:</strong> owaistoheed34501@gmail.com</li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/owais toheed" target="_blank">linkedin.com/in/owais toheed</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/Dallas-rdx" target="_blank">github.com/Dallas-rdx</a></li>
+        </ul>
+
+        <h2>Education</h2>
+        <h3>Bachelor of Technology (B.Tech) in Computer Science & Engineering</h3>
+        <p>Baba Ghulam Shah University, Rajouri<br>
+        CGPA: 68 (Expected 2025)</p>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Degree/Certificate</th>
+                        <th>Institute/Board</th>
+                        <th>CGPA/Percentage</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.Tech., CSE</td>
+                        <td>Baba Ghulam Shah University, Rajouri</td>
+                        <td>68</td>
+                        <td>2025</td>
+                    </tr>
+                    <tr>
+                        <td>Senior Secondary</td>
+                        <td>Govt. Boys Higher Secondary Mendhar/JKBOSE</td>
+                        <td>84</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Secondary</td>
+                        <td>Maqaddas Academy Mendhar/JKBOSE</td>
+                        <td>58</td>
+                        <td>2019</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Technical Skills</h2>
+        <div class="skills-list">
+            <h3>Programming Languages:</h3>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>C++</li>
+                <li>R</li>
+            </ul>
+            <h3>Web Technologies:</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Tailwind CSS</li>
+            </ul>
+            <h3>Tools:</h3>
+            <ul>
+                <li>VS Code</li>
+            </ul>
+        </div>
+
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>FakeNewsDetection System</h3>
+            <p>Built a system to analyze and classify news articles as legitimate or fake using natural language processing and machine learning algorithms (e.g., TF-IDF, BERT), contributing to the fight against misinformation.</p>
+        </div>
+        <div class="project-item">
+            <h3>Toxic Comments Detection</h3>
+            <p>Implemented a machine learning model (e.g., using NLP techniques like LSTM, Transformers) to identify and classify toxic comments in online discussions, aiming to improve content moderation.</p>
+        </div>
+        <div class="project-item">
+            <h3>University Website Development</h3>
+            <p>Collaborated with the university's IT Department, Web Development Team to design and develop sections of the official university website, focusing on improving user experience, implementing new features, and updating content management systems.</p>
+        </div>
+        <div class="project-item">
+            <h3>Blood Donation Website</h3>
+            <p>Developed a web application to connect blood donors with recipients, featuring donor registration, blood request functionalities, and a searchable database of available blood types.</p>
+        </div>
+
+        <h2>Certifications</h2>
+        <div class="certification-item">
+            <h3>Web Development (NIT Srinagar)</h3>
+            <p>This certification indicates proficiency in web development principles and technologies, acquired through training at NIT Srinagar.</p>
+        </div>
+        <div class="certification-item">
+            <h3>Machine Learning (NIT Srinagar)</h3>
+            <p>This certificate demonstrates expertise in machine learning concepts and applications, obtained from NIT Srinagar.</p>
+        </div>
+        <div class="certification-item">
+            <h3>Data Analytics (Infosys)</h3>
+            <p>This certification signifies skills in data analytics, likely including data interpretation, visualization, and reporting, earned through Infosys.</p>
+        </div>
+        <div class="certification-item">
+            <h3>Photo Story (BGSBU Rajouri)</h3>
+            <p>This certificate suggests experience in creating photo stories, possibly involving visual storytelling and digital media, from BGSBU Rajouri.</p>
+        </div>
+        <div class="certification-item">
+            <h3>Volunteer Certificate (BGSBU Rajouri)</h3>
+            <p>This certificate acknowledges participation in volunteer activities, showcasing commitment and contributions, issued by BGSBU Rajouri.</p>
+        </div>
+
+        <h2>Field of Interest</h2>
+        <ul>
+            <li>Competitive Coding</li>
+            <li>Web Development</li>
+            <li>Machine Learning</li>
+        </ul>
+
+        <h2>Achievements</h2>
+        <ul>
+            <li>1st Position in Inter-college Photography Competition</li>
+            <li>Inter-Departmental Volleyball Tournament Winner (2 times)</li>
+            </ul>
+
+        <h2>Positions of Responsibility</h2>
+        <ul>
+            <li>Coordinator, Annual Cultural Festival (2023)</li>
+            <li>Head, Web Competition (2025)</li>
+        </ul>
+
+        <div class="download-resume-section">
+            <a href="assets/img/cvnew.pdf" download="Owais_Toheed_Resume.pdf" class="btn-download">
+                <i class="bi bi-download"></i> Download Resume (PDF)
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="copyright-box">
+                        <p class="copyright">&copy; Copyright <strong>owaisjourney</strong>. All Rights Reserved</p>
+                        <div class="credits">
+                            Designed by <a href="https://in.linkedin.com/in/owais-toheed-85b5b921b" target="_blank">OWAIS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
