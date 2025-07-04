@@ -233,3 +233,83 @@
   new PureCounter();
 
 })()
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const chatbotToggleButton = document.getElementById('chatbot-toggle-button');
+    const chatbotCloseBtn = document.getElementById('chatbot-close-btn');
+    const chatbotBody = document.getElementById('chatbot-body');
+    const userInput = document.getElementById('user-input');
+    const sendButton = document.getElementById('send-button');
+
+    // Toggle chatbot visibility
+    chatbotToggleButton.addEventListener('click', () => {
+        chatbotContainer.classList.toggle('chatbot-closed');
+        if (!chatbotContainer.classList.contains('chatbot-closed')) {
+            userInput.focus(); // Focus on input when opened
+        }
+    });
+
+    chatbotCloseBtn.addEventListener('click', () => {
+        chatbotContainer.classList.add('chatbot-closed');
+    });
+
+    // Function to add message to chat
+    function addMessage(message, type) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('chatbot-message', `${type}-message`);
+        messageDiv.textContent = message;
+        chatbotBody.appendChild(messageDiv);
+        chatbotBody.scrollTop = chatbotBody.scrollHeight; // Scroll to bottom
+    }
+
+    // Simple chatbot logic
+    function getBotResponse(userMessage) {
+        userMessage = userMessage.toLowerCase(); // Convert to lowercase for easier matching
+
+        if (userMessage.includes('hello') || userMessage.includes('hi')) {
+            return "Hello there! How can I assist you?";
+        } else if (userMessage.includes('your name')) {
+            return "I am OwaisBot, a simple chatbot designed to help you.";
+        } else if (userMessage.includes('services')) {
+            return "Owais offers Web Design, Web Development, Photography, Responsive Design, Resume Building, and Marketing Services.";
+        } else if (userMessage.includes('contact') || userMessage.includes('email') || userMessage.includes('phone')) {
+            return "You can contact Owais at owaistoheed34501@gmail.com or call +91-6006393403.";
+        } else if (userMessage.includes('skills')) {
+            return "Owais has skills in HTML, CSS3, C++, and JavaScript, among others.";
+        } else if (userMessage.includes('about')) {
+            return "Owais Toheed is a B.Tech Computer Science & Engineering student specializing in web development and machine learning. You can read more in the 'About Me' section.";
+        } else if (userMessage.includes('thank you') || userMessage.includes('thanks')) {
+            return "You're welcome! Is there anything else?";
+        } else if (userMessage.includes('bye') || userMessage.includes('goodbye')) {
+            return "Goodbye! Have a great day!";
+        }
+        return "I'm sorry, I don't understand that. Can you please rephrase or ask about Owais's services, contact, or skills?";
+    }
+
+    // Send message function
+    function sendMessage() {
+        const message = userInput.value.trim();
+        if (message === '') return;
+
+        addMessage(message, 'user');
+        userInput.value = '';
+
+        setTimeout(() => {
+            const botResponse = getBotResponse(message);
+            addMessage(botResponse, 'bot');
+        }, 500); // Simulate typing delay
+    }
+
+    // Event listeners for sending messages
+    sendButton.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    });
+});

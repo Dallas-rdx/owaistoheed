@@ -67,71 +67,84 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/photo.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Owais toheed</span></p>
-                        <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
-                        <p><span class="title-s">Email: </span> <span>owaistoheed34501@gmail.com</span></p>
-                        <p><span class="title-s">Phone: </span> <span>+91-6006393403</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>HTML</span> <span class="pull-right">85%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>CSS3</span> <span class="pull-right">75%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>C++</span> <span class="pull-right">50%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">50%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      My name is Owais Toheed. I am a B.Tech Computer Science & Engineering student at Baba Ghulam Shah University, expected to graduate in 2025. With a strong foundation in programming languages like Python, JavaScript, and C++, I specialize in web development (HTML, CSS, Tailwind CSS) and machine learning. My project portfolio includes impactful work such as a Fake News Detection System, a Toxic Comments Detection model, and contributions to a University Website and a Blood Donation Website. I am a well-rounded individual with certifications in Web Development and Machine Learning from NIT Srinagar, and a keen interest in competitive coding, photography, and volleyball. I have also held positions of responsibility, demonstrating my leadership and collaborative spirit.
-                    </p>
-                  </div>
-                </div>
+
+
+    <div id="chatbot-container" class="chatbot-closed">
+    <div id="chatbot-header">
+        Chat with OwaisBot
+        <button id="chatbot-close-btn">&times;</button>
+    </div>
+    <div id="chatbot-body">
+        <div class="chatbot-message bot-message">Hello! How can I help you today?</div>
+    </div>
+    <div id="chatbot-footer">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div>
+</div>
+
+<div id="chatbot-toggle-button" class="chatbot-toggle">
+    <i class="bi bi-chat-dots-fill"></i> </div>
+
+
+
+<section id="about" class="about-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box-shadow-full about-card"> <div class="row">
+            <div class="col-md-5 d-flex flex-column align-items-center"> <div class="about-img mb-4"> <img src="assets/img/photo.jpg" class="img-fluid rounded-circle b-shadow-a profile-photo" alt="Owais Toheed Profile"> </div>
+              <div class="about-info text-center"> <h2 class="title-s mb-2">Owais Toheed</h2> <p class="lead profile-title">Full Stack Developer</p> <p><i class="bi bi-envelope-fill"></i> <a href="mailto:owaistoheed34501@gmail.com">owaistoheed34501@gmail.com</a></p>
+                <p><i class="bi bi-phone-fill"></i> <a href="tel:+916006393403">+91-6006393403</a></p>
               </div>
+            </div>
+
+            <div class="col-md-7">
+              <div class="about-me pt-4 pt-md-0">
+                <div class="title-box-2">
+                  <h5 class="title-left">About Me</h5>
+                </div>
+                <p class="lead">
+                  My name is Owais Toheed. I am a B.Tech Computer Science & Engineering student at Baba Ghulam Shah University, expected to graduate in 2025. With a strong foundation in programming languages like Python, JavaScript, and C++, I specialize in web development (HTML, CSS, Tailwind CSS) and machine learning. My project portfolio includes impactful work such as a Fake News Detection System, a Toxic Comments Detection model, and contributions to a University Website and a Blood Donation Website. I am a well-rounded individual with certifications in Web Development and Machine Learning from NIT Srinagar, and a keen interest in competitive coding, photography, and volleyball. I have also held positions of responsibility, demonstrating my leadership and collaborative spirit.
+                </p>
+              </div>
+
+              <div class="skill-mf mt-4"> <h5 class="title-s">Skills</h5> <div class="skill-item">
+                  <span>HTML</span> <span class="pull-right">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>CSS3</span> <span class="pull-right">75%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>C++</span> <span class="pull-right">50%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>JAVASCRIPT</span> <span class="pull-right">50%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                </div>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- End About Section -->
+    </div>
+  </div>
+</section>```
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services-mf pt-5 route">
-      <div class="container">
+      <div class="container ">
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
@@ -394,7 +407,7 @@
       });
   });
 </script>
-<script type='text/javascript' src='//pl27050714.profitableratecpm.com/5c/c8/ea/5cc8eaa7ee9d31b342c98e39cdf5aee2.js'></script>
+
 </body>
 
 </html>

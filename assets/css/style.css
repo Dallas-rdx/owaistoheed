@@ -5,6 +5,354 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+/* Custom Styles for the About Section */
+
+#about {
+  background-color: #000; /* Sets the overall section background to black */
+}
+
+.about-mf .box-shadow-full {
+  background-color: #000; /* Ensures the main content box also has a black background */
+  color: #fff; /* Sets default text color within this box to white */
+}
+
+/* Headings and Titles */
+.about-mf .title-s, /* For "Name:", "Profile:", "Email:", "Phone:" */
+.about-mf h2, /* For your name "Owais Toheed" */
+.about-mf .profile-title, /* For "Full Stack Developer" */
+.about-mf h5 /* For "About Me" and "Skills" titles */ {
+  color: #007bff; /* A standard bright blue */
+  /* You can use a specific hex code for your preferred blue, e.g., #1DA1F2 for Twitter blue, or #3366CC for a darker corporate blue. */
+   
+}
+.title-left{
+  text-align: center;
+}
+/* Specific text elements that might override defaults and need to be white */
+.about-me p.lead {
+  color: #fff; /* Ensures the main "About Me" paragraph text is white */
+  text-align: center;
+}
+
+.about-info p span {
+    color: #fff; /* Ensures the values next to the titles are also white */
+}
+
+/* Adjust progress bar colors if needed for visibility on dark background */
+.skill-mf .progress-bar {
+  background-color: #007bff; /* Keeps the progress bar blue */
+}
+
+/* Link colors for email/phone if you want them blue on hover or always */
+.about-info a {
+  color: #fff; /* Keep links white initially */
+  text-decoration: none; /* Remove underline */
+}
+
+.about-info a:hover {
+  color: #007bff; /* Blue on hover for links */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Ensure the skill percentages on the right are white */
+.skill-mf span.pull-right {
+    color: #fff;
+}
+
+/* Optional: Adjust box-shadow color if present, for better contrast on black */
+.box-shadow-full {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2); /* You might want to remove or lighten this for a black background, or use an inner shadow. */
+}
+
+
+/* Custom Styles for the Services Section */
+
+#services {
+  background-color: #000; /* Sets the overall section background to black */
+}
+
+/* Main section title */
+#services .title-box .title-a {
+  color: #007bff; /* Blue heading for "Services" title */
+}
+
+/* Subtitle (if you add text there later) */
+#services .title-box .subtitle-a {
+  color: #fff; /* White text for the subtitle */
+}
+
+/* The decorative line under the main title */
+#services .title-box .line-mf {
+  background-color: #007bff; /* Blue for the separator line */
+}
+
+/* Individual service boxes */
+#services .service-box {
+  background-color: #000; /* Ensures service box background is black */
+  color: #fff; /* Sets default text color inside service box to white */
+ 
+}
+
+/* Service icons circle */
+#services .service-ico .ico-circle {
+  background-color: #007bff; /* Blue background for the icon circle */
+  color: #fff; /* White color for the icon itself */
+  border-color: #007bff; /* Blue border for consistency */
+}
+
+/* Optional: Hover effect for icon circle */
+#services .service-box:hover .ico-circle {
+  background-color: #fff; /* White background on hover */
+  color: #007bff; /* Blue icon on hover */
+  border-color: #fff; /* White border on hover */
+}
+
+
+/* Individual service titles */
+#services .service-content .s-title {
+  color: #007bff; /* Blue for service titles like "Web Design" */
+}
+
+/* Service descriptions */
+#services .service-content .s-description {
+  color: #fff; /* White text for service descriptions */
+}
+
+
+/* Custom Styles for the Contact Section */
+
+/* The main content box within the contact section */
+#contact .contact-mf #contact.box-shadow-full { /* Targeting specifically to ensure it overrides */
+  background-color: #000; /* Sets the background of the contact form/info box to black */
+  color: #fff; /* Sets default text color within this box to white */
+  border: 1px solid #333; /* Optional: Adds a subtle border for definition */
+}
+
+/* Headings within the contact box ("Send Message Us", "Get in Touch") */
+#contact .contact-mf .title-box-2 h5.title-left {
+  color: #007bff; /* Blue for the headings */
+}
+
+/* Introductory paragraph for "Get in Touch" */
+#contact .more-info p.lead {
+  color: #fff; /* White text for the introductory paragraph */
+}
+
+/* List items for contact details (address, phone, email) */
+#contact .more-info .list-ico li {
+  color: #fff; /* White text for list items */
+}
+
+/* Icons within the contact detail list */
+#contact .more-info .list-ico li span.bi {
+  color: #007bff; /* Blue for the contact info icons */
+}
+
+/* Form input fields and textareas */
+#contact form .form-control {
+  background-color: #333; /* Darker background for input fields for contrast */
+  color: #fff; /* White text color in input fields */
+  border: 1px solid #555; /* Subtle border for inputs */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Placeholder text in form fields */
+#contact form .form-control::placeholder {
+  color: #bbb; /* Lighter grey for placeholder text */
+  opacity: 1; /* Ensure placeholder is visible */
+}
+
+/* Focus state for form fields */
+#contact form .form-control:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Blue glow on focus */
+  background-color: #222; /* Slightly lighter dark on focus */
+}
+
+/* Send Message Button */
+#contact form .button-a {
+  background-color: #007bff; /* Blue background for the button */
+  border-color: #007bff; /* Blue border for the button */
+  color: #fff; /* White text for the button */
+}
+
+#contact form .button-a:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
+  border-color: #0056b3; /* Darker blue border on hover */
+  color: #fff;
+}
+
+/* Status messages (Loading, Error, Sent) */
+#contact .loading,
+#contact .error-message,
+#contact .sent-message {
+  color: #fff; /* White text for all status messages */
+  background-color: transparent; /* Ensure no background interferes */
+}
+
+#contact .error-message {
+    color: #dc3545; /* Red for error messages */
+}
+
+#contact .sent-message {
+    color: #28a745; /* Green for success messages */
+}
+
+
+/* Social media icons */
+#contact .socials .ico-circle {
+  background-color: #007bff; /* Blue background for social icon circles */
+  color: #fff; /* White color for social media icons */
+  border: 3px solid #007bff; /* Blue border for circles */
+}
+
+#contact .socials .ico-circle:hover {
+  background-color: #fff; /* White background on hover */
+  color: #007bff; /* Blue icon on hover */
+  border-color: #fff; /* White border on hover */
+}
+
+/* Overlay on the background image - adjust if you want more or less of the image to show */
+#contact .overlay-mf {
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity for background image visibility */
+}
+
+
+
+/* Chatbot Styles */
+#chatbot-container {
+    position: fixed;
+    bottom: 100px; /* Adjust as needed, above the back-to-top button */
+    right: 20px;
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    z-index: 1000; /* Ensure it's above other content */
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#chatbot-container.chatbot-closed {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none; /* Disable interactions when closed */
+}
+
+#chatbot-header {
+    background-color: #007bff; /* Primary color from your theme */
+    color: white;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chatbot-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#chatbot-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.chatbot-message {
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background-color: #e0e0e0;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+#chatbot-footer {
+    display: flex;
+    padding: 10px;
+    background-color: #eee;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+#send-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+/* Chatbot Toggle Button */
+#chatbot-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1001; /* Above the chatbot container */
+    transition: background-color 0.2s;
+}
+
+#chatbot-toggle-button:hover {
+    background-color: #0056b3;
+}
+
+
 
 /*--------------------------------------------------------------
 # General
@@ -633,6 +981,7 @@ a:hover {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+   
   }
 
   .navbar ul {
@@ -666,7 +1015,7 @@ a:hover {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: black;
   overflow-y: auto;
   transition: 0.3s;
 }
