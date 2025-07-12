@@ -2,7 +2,7 @@
   "name": "my",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/Dallas-rdx/owaistoheed.git",
+  "homepage": "https://dallas-rdx.github.io/owaistoheed/",
   "type": "module",
  "scripts": {
   "dev": "vite",
